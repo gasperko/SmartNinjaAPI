@@ -11,6 +11,23 @@
 |
 */
 
-$app->get('/', function() use ($app) {
+$app->get('/', function () use ($app)
+{
     return $app->welcome();
 });
+
+$app->group(array('prefix' => '/api/CMW'), function () use ($app)
+{
+    //  Cars
+    $app->get('cars', array('uses' => 'App\Http\Controllers\CarsController@index'));
+    $app->get('cars/{id}', array('uses' => 'App\Http\Controllers\CarsController@show'));
+
+    //  Timeslots
+    $app->get('timeslots', array('uses' => 'App\Http\Controllers\TimeslotsController@index'));
+    $app->get('timeslots/{id}', array('uses' => 'App\Http\Controllers\TimeslotsController@show'));
+
+    //  Car reservation
+    $app->post('reservations', array('uses' => 'App\Http\Controllers\ReservationsController@store'));
+});
+
+
