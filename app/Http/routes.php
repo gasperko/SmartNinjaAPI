@@ -28,6 +28,12 @@ $app->group(array('prefix' => '/api/CMW'), function () use ($app)
 
     //  Car reservation
     $app->post('reservations', array('uses' => 'App\Http\Controllers\ReservationsController@store'));
+
+    //  Documentation
+    $app->get('docs', function()
+    {
+       return view('documentation.cmw.documentation');
+    });
 });
 
 
