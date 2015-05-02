@@ -1,5 +1,6 @@
-<?php namespace App\Http\Controllers;
+<?php namespace App\Components\CMW\Http\Controllers;
 
+use App\Http\Controllers\Controller;
 use Carbon\Carbon;
 use Faker;
 

@@ -19,15 +19,15 @@ $app->get('/', function () use ($app)
 $app->group(array('prefix' => '/api/CMW'), function () use ($app)
 {
     //  Cars
-    $app->get('cars', array('uses' => 'App\Http\Controllers\CarsController@index'));
-    $app->get('cars/{id}', array('uses' => 'App\Http\Controllers\CarsController@show'));
+    $app->get('cars', array('uses' => 'App\Components\CMW\Http\Controllers\CarsController@index'));
+    $app->get('cars/{id}', array('uses' => 'App\Components\CMW\Http\Controllers\CarsController@show'));
 
     //  Timeslots
-    $app->get('timeslots', array('uses' => 'App\Http\Controllers\TimeslotsController@index'));
-    $app->get('timeslots/{id}', array('uses' => 'App\Http\Controllers\TimeslotsController@show'));
+    $app->get('timeslots', array('uses' => 'App\Components\CMW\Http\Controllers\TimeslotsController@index'));
+    $app->get('timeslots/{id}', array('uses' => 'App\Components\CMW\Http\Controllers\TimeslotsController@show'));
 
     //  Car reservation
-    $app->post('reservations', array('uses' => 'App\Http\Controllers\ReservationsController@store'));
+    $app->post('reservations', array('uses' => 'App\Components\CMW\Http\Controllers\ReservationsController@store'));
 
     //  Documentation
     $app->get('docs', function()
