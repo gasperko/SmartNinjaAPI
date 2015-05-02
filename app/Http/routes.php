@@ -46,10 +46,13 @@ $app->group(array('prefix' => '/api/eshop'), function () use ($app)
     $app->get('products', array('uses' => 'App\Components\eshop\Http\Controllers\ProductsController@index'));
     $app->get('products/{id}', array('uses' => 'App\Components\eshop\Http\Controllers\ProductsController@show'));
 
+    //  Orders
+    $app->post('orders', array('uses' => 'App\Components\eshop\Http\Controllers\OrdersController@store'));
+
     //  Documentation
     $app->get('docs', function()
     {
-        return view('documentation.cmw.documentation');
+        return view('documentation.eshop.documentation');
     });
 });
 
