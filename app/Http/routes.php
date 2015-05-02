@@ -36,4 +36,20 @@ $app->group(array('prefix' => '/api/CMW'), function () use ($app)
     });
 });
 
+$app->group(array('prefix' => '/api/eshop'), function () use ($app)
+{
+    //  Categories
+    $app->get('categories', array('uses' => 'App\Components\eshop\Http\Controllers\CategoriesController@index'));
+
+    //  Products
+    $app->get('products', array('uses' => 'App\Components\eshop\Http\Controllers\ProductsController@index'));
+    $app->get('products/{id}', array('uses' => 'App\Components\eshop\Http\Controllers\ProductsController@show'));
+
+    //  Documentation
+    $app->get('docs', function()
+    {
+        return view('documentation.cmw.documentation');
+    });
+});
+
 
