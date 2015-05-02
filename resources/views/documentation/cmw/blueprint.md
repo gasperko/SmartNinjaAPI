@@ -123,7 +123,7 @@ Navodila za pridobivanja podatkov o terminih.
 # Group Rezervacije
 # /api/CMW/reservartions
 
-Pri rezervaciji termina morate podati id od termine ter veljaven (uporabnikov) email.
+Pri rezervaciji termina morate podati id od termina ter veljaven (uporabnikov) email.
 
 ## Ustvari novo rezervacijo [POST] 
 
