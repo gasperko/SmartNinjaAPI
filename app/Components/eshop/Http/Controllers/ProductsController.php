@@ -3,7 +3,8 @@
 use App\Components\eshop\Category;
 use App\Components\eshop\Product;
 use App\Http\Controllers\Controller;
-
+use Illuminate\Database\Eloquent\Collection;
+use Illuminate\Http\Request;
 
 class ProductsController extends Controller
 {
@@ -21,9 +22,13 @@ class ProductsController extends Controller
      *
      * @return \Symfony\Component\HttpFoundation\Response
      */
-    public function index()
+    public function index(Request $request)
     {
-        return response()->json($this->products->getProducts());
+        $products = $this->products->getProducts();
+        $products = $this->filterByName($products, $request->get('query'));
+        $products = $this->filterByStock($products, $request->get('onlyStocked'));
+
+        return response()->json($products);
     }
 
     /**
