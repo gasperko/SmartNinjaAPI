@@ -75,6 +75,6 @@ class Product
     {
         if($product['stock'] != 0) return null;
 
-        return Carbon::now('CET')->addDays(14)->toDateString();
+        return Carbon::now('CET')->addDays(14)->format('d.m.Y');
     }
 }

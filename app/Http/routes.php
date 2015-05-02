@@ -40,6 +40,7 @@ $app->group(array('prefix' => '/api/eshop'), function () use ($app)
 {
     //  Categories
     $app->get('categories', array('uses' => 'App\Components\eshop\Http\Controllers\CategoriesController@index'));
+    $app->get('categories/{id}/products', array('uses' => 'App\Components\eshop\Http\Controllers\CategoriesController@getProducts'));
 
     //  Products
     $app->get('products', array('uses' => 'App\Components\eshop\Http\Controllers\ProductsController@index'));
