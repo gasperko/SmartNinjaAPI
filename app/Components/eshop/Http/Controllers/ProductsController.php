@@ -27,6 +27,7 @@ class ProductsController extends Controller
         $products = $this->products->getProducts();
         $products = $this->filterByName($products, $request->get('query'));
         $products = $this->filterByStock($products, $request->get('onlyStocked'));
+        $products = $this->filterByOnSale($products, $request->get('onlyOnSale'));
 
         return response()->json($products);
     }

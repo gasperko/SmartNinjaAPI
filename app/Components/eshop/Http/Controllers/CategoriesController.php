@@ -47,6 +47,7 @@ class CategoriesController extends Controller
 
         $products = $this->filterByName($products, $this->request->get('query'));
         $products = $this->filterByStock($products, $this->request->get('onlyStocked'));
+        $products = $this->filterByOnSale($products, $this->request->get('onlyOnSale'));
 
         return response()->json($products);
     }

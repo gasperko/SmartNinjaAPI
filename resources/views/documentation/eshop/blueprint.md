@@ -39,6 +39,8 @@ Navodila za pridobivanja podatkov o kategorijah.
 + query (string, optional) - filter po imenih izdelkov
 + onlyStocked (boolean, optional) - filter po izdelkih, ki so na zalogi
     + default: false
++ onlyOnSale (boolean, optional) - filter po izdelkih, ki so v akciji
+    + default: false
     
 + Response 200 (application/json)
 
@@ -97,6 +99,8 @@ Navodila za pridobivanja podatkov o izdelkih.
 
 + query (string, optional) - filter po imenih izdelkov
 + onlyStocked (boolean, optional) - filter po izdelkih, ki so na zalogi
+    + default: false
++ onlyOnSale (boolean, optional) - filter po izdelkih, ki so v akciji
     + default: false
 
 + Response 200 (application/json)

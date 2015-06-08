@@ -66,4 +66,34 @@ class Controller extends BaseController
 
         return $products;
     }
+
+    /**
+     *  Filter collection by 'on sale'.
+     *
+     * @param Collection $products
+     * @param            $onSale
+     *
+     * @return Collection|static
+     */
+    protected function filterByOnSale($products, $onSale)
+    {
+        if (!isset($onSale) || !$onSale)
+        {
+            return $products;
+        }
+
+        $products = array_filter($products, function ($item)
+        {
+            if ($item['onSale'] == false)
+            {
+                return false;
+            }
+
+            return true;
+        });
+
+        $products = array_values($products);
+
+        return $products;
+    }
 }
