@@ -1,7 +1,7 @@
 FORMAT: 1A
 
 # CMW SmartNinja API
-A simple API for retrieving data about cars, timeslots and and reseravations. This API is meant for SmartNinja students.
+A simple API for retrieving data about cars, timeslots and reservations. This API is meant for SmartNinja students.
 
 # Group Cars
 
