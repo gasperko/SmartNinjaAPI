@@ -1,45 +1,45 @@
 FORMAT: 1A
 
 # Eshop SmartNinja API
-Enostaven API za pridobivanje podatkov o plišastih živali. API je namenjen SmartNinja tečajnikom.
+A simple API for retrieving data about products. This API is meant for SmartNinja students.
 
-# Group Kategorije
+# Group Categories
 
-Navodila za pridobivanja podatkov o kategorijah.
+Instructions for using the API to retrieve information about categories.
 
 # /api/eshop/categories
 
-## Pridobi seznam kategorij [GET] 
+## Get a list of categories [GET] 
 
 + Response 200 (application/json)
 
     [
         {
             id: 1,
-            category: "Male plišaste živali"
+            category: "Big toys"
         },
         {
             id: 2,
-            category: "Velike plišaste živali"
+            category: "Medium toys"
         },
         {
             id: 3,
-            category: "Plišasti obeski"
+            category: "Small toys"
         },
         {
             id: 4,
-            category: "Knjige in slikanice"
+            category: "Games"
         }
     ] 
     
 # /api/eshop/categories/{id}/products{?query, onlyStocked}
 
-## Pridobi seznam izdelkov znotraj ene kategorije [GET] 
+## Get a list of products for a category [GET] 
 
-+ query (string, optional) - filter po imenih izdelkov
-+ onlyStocked (boolean, optional) - filter po izdelkih, ki so na zalogi
++ query (string, optional) - filter by name
++ onlyStocked (boolean, optional) - filter by stocked products
     + default: false
-+ onlyOnSale (boolean, optional) - filter po izdelkih, ki so v akciji
++ onlyOnSale (boolean, optional) - filter by products on sale
     + default: false
     
 + Response 200 (application/json)
@@ -89,18 +89,18 @@ Navodila za pridobivanja podatkov o kategorijah.
         }
     ]
 
-# Group Izdelki
+# Group Products
 
-Navodila za pridobivanja podatkov o izdelkih.
+Instructions for retrieving information about products.
 
 # /api/eshop/products{?query, onlyStocked}
 
-## Pridobi seznam izdelkov [GET] 
+## Get a list of products [GET] 
 
-+ query (string, optional) - filter po imenih izdelkov
-+ onlyStocked (boolean, optional) - filter po izdelkih, ki so na zalogi
++ query (string, optional) - filter by name
++ onlyStocked (boolean, optional) - filter by stocked products
     + default: false
-+ onlyOnSale (boolean, optional) - filter po izdelkih, ki so v akciji
++ onlyOnSale (boolean, optional) - filter by products on sale
     + default: false
 
 + Response 200 (application/json)
@@ -152,7 +152,7 @@ Navodila za pridobivanja podatkov o izdelkih.
     
 # /api/eshop/products/{id}
 
-## Pridobi podatke o izdelku [GET] 
+## Get information about a specific product [GET] 
 
 + Response 200 (application/json)
 
@@ -171,12 +171,12 @@ Navodila za pridobivanja podatkov o izdelkih.
         availableOn: null
     }
     
-# Group Nakupi
+# Group Orders
 # /api/eshop/orders
 
-Pri nakupu morate podati podatke o uporabniku kot podatke o košarici.
+When creating a new order you have to supply cart and user information.
 
-## Ustvari nov nakup [POST] 
+## Create a new order [POST] 
 
 
 + Request JSON message

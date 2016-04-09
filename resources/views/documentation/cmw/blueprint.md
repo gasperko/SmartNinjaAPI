@@ -1,15 +1,15 @@
 FORMAT: 1A
 
 # CMW SmartNinja API
-Enostaven API za pridobivanje podatkov o avtomobilih, časovnih terminih in možnost rezervacij. API je namenjen SmartNinja tečajnikom.
+A simple API for retrieving data about cars, timeslots and and reseravations. This API is meant for SmartNinja students.
 
-# Group Avtomobili
+# Group Cars
 
-Navodila za pridobivanja podatkov o avtomobilih.
+Instructions for using the cars API.
 
 # /api/CMW/cars
 
-## Pridobi seznam avtomobilov [GET] 
+## Get car list [GET] 
 
 + Response 200 (application/json)
 
@@ -45,7 +45,7 @@ Navodila za pridobivanja podatkov o avtomobilih.
         
 # /api/CMW/cars/{id}
 
-## Pridobi podatke o avtomobilu [GET] 
+## Get information about a specific car [GET] 
 
 + Response 200 (application/json)
 
@@ -59,13 +59,13 @@ Navodila za pridobivanja podatkov o avtomobilih.
 			description: "Accusamus nihil repellat vero omnis voluptates id amet et. Suscipit qui recusandae totam nulla quam ipsam. Cupiditate sed natus debitis voluptas aut. Sit repudiandae esse perspiciatis dignissimos error. Itaque quibusdam tempora velit porro ut velit soluta. Eligendi occaecati debitis et saepe."
 		}
 
-# Group Termini
+# Group Timeslots
 
-Navodila za pridobivanja podatkov o terminih.
+Instructions for using the timeslots API.
 
 # /api/CMW/timeslots
 
-## Pridobi seznam terminov [GET] 
+## Get timeslots list [GET] 
 
 + Response 200 (application/json)
 
@@ -105,7 +105,7 @@ Navodila za pridobivanja podatkov o terminih.
 # /api/CMW/timeslots/{id}
 
 
-## Pridobi podatke o terminu [GET] 
+## Get information about a specific timeslot [GET] 
 
 + Response 200 (application/json)
 	
@@ -120,12 +120,12 @@ Navodila za pridobivanja podatkov o terminih.
 		contactEmail: "Joan.Doyle@Lynch.net"
 	}
 
-# Group Rezervacije
+# Group Reservations
 # /api/CMW/reservations
 
-Pri rezervaciji termina morate podati id od termina ter veljaven (uporabnikov) email.
+When using the reservation API, you have to supply the timeslot id as well as a valid email.
 
-## Ustvari novo rezervacijo [POST] 
+## Create a new reservation [POST] 
 
 
 + Request JSON message

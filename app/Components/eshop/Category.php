@@ -12,10 +12,10 @@ class Category
     {
         $categories = array();
 
-        $categories[] = array('id' => 1, 'category' => 'Male plišaste živali');
-        $categories[] = array('id' => 2, 'category' => 'Velike plišaste živali');
-        $categories[] = array('id' => 3, 'category' => 'Plišasti obeski');
-        $categories[] = array('id' => 4, 'category' => 'Knjige in slikanice');
+        $categories[] = array('id' => 1, 'category' => 'Big toys');
+        $categories[] = array('id' => 2, 'category' => 'Medium toys');
+        $categories[] = array('id' => 3, 'category' => 'Small toys');
+        $categories[] = array('id' => 4, 'category' => 'Games');
 
         return $categories;
     }
