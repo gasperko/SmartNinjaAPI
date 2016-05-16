@@ -17,7 +17,7 @@
         id: <span class="hljs-number">4</span>,
         category: <span class="hljs-string">"Games"</span>
     }
-]</code></pre><div style="height: 1px;"></div></div></div></div></div><div id="categories--1" class="resource"><h3 class="resource-heading">Get a list of products for a category <a href="#categories--1" class="permalink">&nbsp;&para;</a></h3><div id="categories-get-1" class="action get"><h4 class="action-heading"><div class="name">Get a list of products for a category</div><a href="#categories-get-1" class="method get">GET</a><code class="uri">/api/eshop/categories/products</code></h4><ul>
+]</code></pre><div style="height: 1px;"></div></div></div></div></div><div id="categories--1" class="resource"><h3 class="resource-heading">Get a list of products for a category <a href="#categories--1" class="permalink">&nbsp;&para;</a></h3><div id="categories-get-1" class="action get"><h4 class="action-heading"><div class="name">Get a list of products for a category</div><a href="#categories-get-1" class="method get">GET</a><code class="uri">/api/eshop/categories/{id}/products</code></h4><ul>
 <li>
 <p>query (string, optional) - filter by name</p>
 </li>
